@@ -39,6 +39,7 @@ public class Ball {
 		reflect();
 		
 		//TODO Check postcondition
+		assert y>Board.TOPBOARD && y<Board.BOTTOMBOARD && x>Board.LEFTBOARD && x<Board.RIGHTBOARD: "La bola no tiene que salirse los límites del tablero";
 	}
 
 	private void reflect() {
