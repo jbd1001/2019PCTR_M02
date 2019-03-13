@@ -23,6 +23,7 @@ public class Ball {
 		y = Billiards.Height/2-16;
 		v = 5;
 		fi =  Math.random() * Math.PI * 2;
+		assert y>Board.TOPBOARD && y<Board.BOTTOMBOARD && x>Board.LEFTBOARD && x<Board.RIGHTBOARD: "La bola no tiene que salirse los límites del tablero";	
 	}
 
 	public void move() {
@@ -75,10 +76,12 @@ public class Ball {
 
 	public void setX(double x) {
 		this.x = x;
+		assert y>Board.TOPBOARD && y<Board.BOTTOMBOARD && x>Board.LEFTBOARD && x<Board.RIGHTBOARD: "La bola no tiene que salirse los límites del tablero";
 	}
 
 	public void setY(double y) {
 		this.y = y;
+		assert y>Board.TOPBOARD && y<Board.BOTTOMBOARD && x>Board.LEFTBOARD && x<Board.RIGHTBOARD: "La bola no tiene que salirse los límites del tablero";
 	}
 
 	public Image getImage() {
